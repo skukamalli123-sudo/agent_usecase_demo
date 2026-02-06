@@ -1,0 +1,49 @@
+{
+  "summary": {
+    "total_records": 30,
+    "missing_values": 12,
+    "duplicates": 10,
+    "invalid_dates": 6,
+    "invalid_emails": 6,
+    "non_numeric_age": 6,
+    "non_numeric_salary": 5,
+    "negative_age_salary": 8,
+    "non_boolean_is_active": 3
+  },
+  "recommendations": [
+    "Review source system logic for age, salary, and join_date fields.",
+    "Standardize date formats to ISO8601 (YYYY-MM-DD).",
+    "Enforce email validation on input.",
+    "Remove or merge duplicate records."
+  ],
+  "issues_by_row": {
+    "2": ["Missing age", "Non-ISO date format"],
+    "3": ["Invalid email", "Non-ISO date format", "Non-boolean is_active"],
+    "4": ["Negative age"],
+    "5": ["Missing email", "Non-numeric salary"],
+    "7": ["Non-numeric age"],
+    "8": ["Missing join_date"],
+    "9": ["Invalid date"],
+    "10": ["Negative salary"],
+    "11": ["Duplicate row"],
+    "12": ["Duplicate row", "Missing age", "Non-ISO date format"],
+    "13": ["Duplicate row", "Invalid email", "Non-ISO date format", "Non-numeric age", "Non-boolean is_active"],
+    "14": ["Negative age"],
+    "15": ["Missing email", "Non-numeric salary", "Non-boolean is_active"],
+    "16": ["Duplicate row"],
+    "17": ["Duplicate row", "Non-numeric age"],
+    "18": ["Duplicate row", "Missing join_date"],
+    "19": ["Duplicate row", "Invalid date"],
+    "20": ["Duplicate row", "Negative salary"],
+    "21": ["Missing age", "Non-ISO date format"],
+    "22": ["Non-ISO date format"],
+    "23": ["Invalid email"],
+    "24": ["Negative age"],
+    "25": ["Missing email", "Non-numeric salary", "Non-boolean is_active"],
+    "26": ["Duplicate row"],
+    "27": ["Duplicate row", "Non-numeric age"],
+    "28": ["Duplicate row", "Missing join_date"],
+    "29": ["Duplicate row", "Invalid date"],
+    "30": ["Duplicate row", "Negative salary"]
+  }
+}
