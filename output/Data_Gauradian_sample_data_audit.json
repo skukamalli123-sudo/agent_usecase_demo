@@ -1,0 +1,37 @@
+{
+  "input_file": "input/Data_Gauradian_sample_data.txt",
+  "output_files": [
+    "output/Data_Gauradian_sample_data_cleaned.csv",
+    "output/Data_Gauradian_sample_data_validated.csv",
+    "output/Data_Gauradian_sample_data_annotated.csv",
+    "output/Data_Gauradian_sample_data_validation_report.md",
+    "output/Data_Gauradian_sample_data_validation_report.json",
+    "output/Data_Gauradian_sample_data_validation_report.html"
+  ],
+  "run_timestamp": "2024-06-01T12:00:00Z",
+  "row_count_input": 30,
+  "row_count_cleaned": 30,
+  "row_count_validated": 15,
+  "duplicates_removed": 15,
+  "missing_counts": {
+    "age": 4,
+    "email": 3,
+    "join_date": 3,
+    "salary": 5
+  },
+  "invalid_counts": {
+    "age": 4,
+    "email": 3,
+    "salary": 5,
+    "join_date": 3
+  },
+  "validation_failures": [
+    {"row": 3, "column": "email", "reason": "Invalid format"},
+    {"row": 4, "column": "age", "reason": "Negative/Invalid"},
+    {"row": 5, "column": "salary", "reason": "Not available/Invalid"},
+    {"row": 7, "column": "age", "reason": "Non-numeric"},
+    {"row": 9, "column": "join_date", "reason": "Invalid/Missing"},
+    {"row": 10, "column": "salary", "reason": "Negative/Invalid"}
+  ],
+  "commit_message": "feat: cleaned & validated dataset Data_Gauradian_sample_data.txt at 2024-06-01T12:00:00Z"
+}
