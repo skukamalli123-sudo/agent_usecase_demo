@@ -1,0 +1,17 @@
+id,name,age,email,join_date,salary,department,is_active,__aava_annotations__
+1,Alice,29,alice@example.com,2023-01-15,55000,HR,true,{"age":"Valid","join_date":"Standardized","salary":"Valid"}
+2,Bob,,bob@example.com,2023-02-10,48000,Finance,true,{"age":"Missing","join_date":"Standardized","salary":"Valid"}
+3,Charlie,35,charlieexample.com,2023-03-15,70000,IT,true,{"email":"Invalid format","join_date":"Standardized","salary":"Valid"}
+4,David,,david@example.com,2023-04-01,62000,HR,false,{"age":"Negative/Invalid","join_date":"Standardized","salary":"Valid"}
+5,Eva,42,,2023-05-20,,Finance,true,{"email":"Missing","salary":"Not available/Invalid"}
+6,Frank,28,frank@example.com,2023-06-18,51000,IT,true,{"age":"Valid","join_date":"Standardized","salary":"Valid"}
+7,Grace,,grace@example.com,2023-07-25,58000,Marketing,true,{"age":"Non-numeric","join_date":"Standardized","salary":"Valid"}
+8,Hank,45,hank@example.com,,90000,Sales,false,{"join_date":"Missing","salary":"Valid"}
+9,Ivy,31,ivy@example.com,,65000,IT,true,{"join_date":"Invalid/Missing","salary":"Valid"}
+10,Jack,27,jack@example.com,2023-08-10,,HR,true,{"salary":"Negative/Invalid"}
+22,Bob,34,bob@example.com,2023-02-15,48000,Finance,true,{"join_date":"Standardized","salary":"Valid"}
+23,Charlie,35,charlieexample.com,2023-03-15,70000,IT,true,{"email":"Invalid format","join_date":"Standardized","salary":"Valid"}
+26,Frank,28,frank@example.com,2023-06-18,51000,IT,true,{"age":"Valid","join_date":"Standardized","salary":"Valid"}
+28,Hank,45,hank@example.com,,90000,Sales,false,{"join_date":"Missing","salary":"Valid"}
+29,Ivy,31,ivy@example.com,,65000,IT,true,{"join_date":"Invalid/Missing","salary":"Valid"}
+30,Jack,27,jack@example.com,2023-08-10,,HR,true,{"salary":"Negative/Invalid"}
