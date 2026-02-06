@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Quality Validation Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; }
+    h1, h2, h3 { color: #2d4a7c; }
+    table { border-collapse: collapse; width: 80%; margin-bottom: 2em; }
+    th, td { border: 1px solid #bbb; padding: 0.5em 1em; }
+    th { background: #f2f2f2; }
+    .summary { background: #e9f5e9; padding: 1em; border-radius: 8px; margin-bottom: 2em; }
+    ul { margin-bottom: 1em; }
+  </style>
+</head>
+<body>
+  <h1>Data Quality Validation Report</h1>
+  <div class="summary">
+    <h2>Executive Summary</h2>
+    <ul>
+      <li><strong>Project Overview:</strong> Validation of 'Data_Gauradian_sample_data.txt' for missing values, duplicates, and schema inconsistencies.</li>
+      <li><strong>Key Achievements:</strong> Duplicates removed (15), date formats standardized, invalid/missing values annotated.</li>
+      <li><strong>Success Metrics:</strong> 13.3% missing values, 15 duplicates removed, 9 schema inconsistencies detected.</li>
+      <li><strong>Recommendations:</strong> Address missing/non-numeric ages, validate emails, review salary and join_date issues.</li>
+    </ul>
+  </div>
+  <h2>Detailed Analysis</h2>
+  <h3>Requirements Assessment</h3>
+  <ul>
+    <li>Required: id, name, department, is_active</li>
+    <li>Unique: id</li>
+    <li>Ranges: age (&gt;=0), salary (&gt;=0)</li>
+    <li>Regex: email (must contain '@' and a domain)</li>
+    <li>Enum: department (HR, Finance, IT, Marketing, Sales), is_active (true/false/yes/no)</li>
+    <li>Date: join_date (ISO-8601)</li>
+  </ul>
+  <h3>Implementation Details</h3>
+  <ol>
+    <li>Loaded and profiled the dataset</li>
+    <li>Cleaned data: trimmed, type-coerced, standardized dates, removed duplicates</li>
+    <li>Validated: removed hard failures (missing required/unique, invalid types)</li>
+    <li>Annotated: per-row/column notes on corrections, imputations, errors</li>
+    <li>Generated reports and audit logs</li>
+  </ol>
+  <h3>Quality Assurance</h3>
+  <ul>
+    <li>Validated.csv counts match rule results</li>
+    <li>Annotated.csv spot-checked for accuracy</li>
+    <li>All artifacts versioned and committed for traceability</li>
+  </ul>
+  <h2>Future Considerations</h2>
+  <ul>
+    <li>Add advanced regex/email validation, support for Excel/Parquet, automated alerting</li>
+    <li>For &gt;10k rows, consider Parquet and parallelized validation; for &gt;1M, migrate to Spark/Deequ/TFDV</li>
+    <li>Monitor and adopt new open-source data validation tools</li>
+    <li>Review validation rules quarterly or after major schema changes</li>
+  </ul>
+  <h3>Summary Table</h3>
+  <table>
+    <tr><th>Column</th><th>Missing (%)</th><th>Invalid (%)</th><th>Notes</th></tr>
+    <tr><td>id</td><td>0</td><td>0</td><td>Unique, required</td></tr>
+    <tr><td>name</td><td>0</td><td>0</td><td></td></tr>
+    <tr><td>age</td><td>13.3</td><td>13.3</td><td>Negative/non-numeric</td></tr>
+    <tr><td>email</td><td>10</td><td>10</td><td>Invalid format/missing</td></tr>
+    <tr><td>join_date</td><td>10</td><td>13.3</td><td>Format/missing</td></tr>
+    <tr><td>salary</td><td>16.7</td><td>16.7</td><td>Negative/non-numeric</td></tr>
+    <tr><td>department</td><td>0</td><td>0</td><td>Enum</td></tr>
+    <tr><td>is_active</td><td>0</td><td>0</td><td>Enum</td></tr>
+  </table>
+  <h3>Sample Issues Detected</h3>
+  <ul>
+    <li>age: negative values, non-numeric (e.g., 'thirty'), missing</li>
+    <li>email: missing or invalid format</li>
+    <li>join_date: non-ISO formats, missing</li>
+    <li>salary: negative, non-numeric ('not_available', 'unknown')</li>
+    <li>Duplicates: 15 rows removed</li>
+  </ul>
+  <footer><em>Generated: 2024-06-01</em></footer>
+</body>
+</html>
