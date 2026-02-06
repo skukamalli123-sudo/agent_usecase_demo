@@ -1,0 +1,31 @@
+id,name,age,email,join_date,salary,department,is_active,validation_errors
+1,Alice,29,alice@example.com,2023-01-15,55000,HR,true,
+2,Bob,,bob@example.com,2023/02/10,48000,Finance,true,Missing age; Non-ISO date format
+3,Charlie,35,charlieexample.com,15-03-2023,70000,IT,yes,Invalid email; Non-ISO date format; Non-boolean is_active
+4,David,-4,david@example.com,2023-04-01,62000,HR,false,Negative age
+5,Eva,42,,2023-05-20,not_available,Finance,true,Missing email; Non-numeric salary
+6,Frank,28,frank@example.com,2023-06-18,51000,IT,true,
+7,Grace,thirty,grace@example.com,2023-07-25,58000,Marketing,true,Non-numeric age
+8,Hank,45,hank@example.com,,90000,Sales,false,Missing join_date
+9,Ivy,31,ivy@example.com,2023-13-01,65000,IT,true,Invalid date
+10,Jack,27,jack@example.com,2023-08-10,-40000,HR,true,Negative salary
+11,Alice,29,alice@example.com,2023-01-15,55000,HR,true,Duplicate row
+12,Bob,,bob@example.com,2023/02/10,48000,Finance,true,Duplicate row; Missing age; Non-ISO date format
+13,Charlie,thirty,charlieexample.com,15-03-2023,70000,IT,yes,Duplicate row; Invalid email; Non-ISO date format; Non-numeric age; Non-boolean is_active
+14,David,-2,david@example.com,2023-04-01,62000,HR,false,Negative age
+15,Eva,42,,2023-05-20,unknown,Finance,yes,Missing email; Non-numeric salary; Non-boolean is_active
+16,Frank,28,frank@example.com,2023-06-18,51000,IT,true,Duplicate row
+17,Grace,thirty,grace@example.com,2023-07-25,58000,Marketing,true,Duplicate row; Non-numeric age
+18,Hank,45,hank@example.com,,90000,Sales,false,Duplicate row; Missing join_date
+19,Ivy,31,ivy@example.com,2023-13-01,65000,IT,true,Duplicate row; Invalid date
+20,Jack,27,jack@example.com,2023-08-10,-40000,HR,true,Duplicate row; Negative salary
+21,Alice,,alice@example.com,2023/01/15,55000,HR,true,Missing age; Non-ISO date format
+22,Bob,34,bob@example.com,15-02-2023,48000,Finance,true,Non-ISO date format
+23,Charlie,35,charlieexample.com,2023-03-15,70000,IT,true,Invalid email
+24,David,-5,david@example.com,2023-04-01,62000,HR,false,Negative age
+25,Eva,42,,2023-05-20,not_available,Finance,yes,Missing email; Non-numeric salary; Non-boolean is_active
+26,Frank,28,frank@example.com,2023-06-18,51000,IT,true,Duplicate row
+27,Grace,thirty,grace@example.com,2023-07-25,58000,Marketing,true,Duplicate row; Non-numeric age
+28,Hank,45,hank@example.com,,90000,Sales,false,Duplicate row; Missing join_date
+29,Ivy,31,ivy@example.com,2023-13-01,65000,IT,true,Duplicate row; Invalid date
+30,Jack,27,jack@example.com,2023-08-10,-40000,HR,true,Duplicate row; Negative salary
