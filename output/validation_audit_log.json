@@ -1,0 +1,31 @@
+{
+  "validation_date": "2024-06-09",
+  "input_file": "Data_Gauradian_sample_data.txt",
+  "output_file": "Data_Gauradian_sample_data_validated.csv",
+  "total_records": 30,
+  "actions": [
+    "Checked for missing values in critical fields (age, email, join_date)",
+    "Validated data types and formats (age, salary, join_date, email, is_active)",
+    "Flagged and annotated duplicate rows",
+    "Generated validation reports in Markdown, HTML, JSON",
+    "Saved annotated dataset and reports to GitHub output folder"
+  ],
+  "issues_detected": {
+    "missing_values": 12,
+    "duplicates": 10,
+    "invalid_dates": 6,
+    "invalid_emails": 6,
+    "non_numeric_age": 6,
+    "non_numeric_salary": 5,
+    "negative_age_salary": 8,
+    "non_boolean_is_active": 3
+  },
+  "auto_corrections": [
+    "Trimmed whitespace from all string fields",
+    "Standardized boolean values where clear (e.g., 'yes' to 'true')"
+  ],
+  "manual_review_required": [
+    "Rows with complex schema errors (age, salary, join_date, email)"
+  ],
+  "log_version": "1.0"
+}
