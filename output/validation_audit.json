@@ -1,0 +1,62 @@
+{
+  "dataset": "Data_Gauradian_sample_data.txt",
+  "validation_date": "2024-06-11",
+  "total_rows": 30,
+  "missing_values": {
+    "age": 4,
+    "email": 4,
+    "join_date": 4,
+    "salary": 4
+  },
+  "duplicates": 10,
+  "inconsistencies": {
+    "invalid_email": 6,
+    "invalid_date": 8,
+    "negative_age": 4,
+    "non_numeric_age": 6,
+    "negative_salary": 6,
+    "salary_not_numeric": 4,
+    "is_active_not_boolean": 4
+  },
+  "flagged_rows": [2,3,4,5,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,23,24,25,27,28,29,30],
+  "actions_taken": [
+    "Flagged missing values in error columns",
+    "Marked duplicates in duplicate column",
+    "Logged all detected inconsistencies"
+  ],
+  "validation_rules": {
+    "age": "positive integer",
+    "salary": "numeric and non-negative",
+    "email": "must contain '@' and '.'",
+    "join_date": "valid date (YYYY-MM-DD)",
+    "is_active": "true or false"
+  },
+  "change_log": [
+    {"row":2,"change":"Flagged missing age"},
+    {"row":3,"change":"Flagged invalid email, invalid date, is_active not boolean"},
+    {"row":4,"change":"Flagged negative age"},
+    {"row":5,"change":"Flagged missing email, salary not numeric"},
+    {"row":7,"change":"Flagged non-numeric age"},
+    {"row":8,"change":"Flagged missing join_date"},
+    {"row":9,"change":"Flagged invalid date"},
+    {"row":10,"change":"Flagged negative salary"},
+    {"row":11,"change":"Marked as duplicate"},
+    {"row":12,"change":"Marked as duplicate, flagged missing age"},
+    {"row":13,"change":"Marked as duplicate, flagged non-numeric age, invalid email, invalid date, is_active not boolean"},
+    {"row":14,"change":"Marked as duplicate, flagged negative age"},
+    {"row":15,"change":"Marked as duplicate, flagged missing email, salary not numeric, is_active not boolean"},
+    {"row":16,"change":"Marked as duplicate"},
+    {"row":17,"change":"Marked as duplicate, flagged non-numeric age"},
+    {"row":18,"change":"Marked as duplicate, flagged missing join_date"},
+    {"row":19,"change":"Marked as duplicate, flagged invalid date"},
+    {"row":20,"change":"Marked as duplicate, flagged negative salary"},
+    {"row":21,"change":"Flagged missing age"},
+    {"row":23,"change":"Flagged invalid email"},
+    {"row":24,"change":"Flagged negative age"},
+    {"row":25,"change":"Flagged missing email, salary not numeric, is_active not boolean"},
+    {"row":27,"change":"Flagged non-numeric age"},
+    {"row":28,"change":"Flagged missing join_date"},
+    {"row":29,"change":"Flagged invalid date"},
+    {"row":30,"change":"Flagged negative salary"}
+  ]
+}
