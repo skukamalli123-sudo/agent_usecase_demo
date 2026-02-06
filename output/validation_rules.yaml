@@ -1,0 +1,27 @@
+# Validation Rules Configuration
+schema:
+  id: integer
+  name: string
+  age: integer (positive, required)
+  email: string (must contain '@' and '.')
+  join_date: string (ISO8601 date, required)
+  salary: float (positive)
+  department: string
+  is_active: boolean (true/false)
+checks:
+  - missing_values: [age, email, join_date]
+  - duplicates: all_columns
+  - invalid_email: regex: '^[^@\s]+@[^@\s]+\.[^@\s]+$'
+  - invalid_date: regex: '^\d{4}-\d{2}-\d{2}$'
+  - non_numeric_age: age not integer
+  - negative_age: age < 0
+  - non_numeric_salary: salary not numeric
+  - negative_salary: salary < 0
+  - non_boolean_is_active: is_active not in [true, false]
+scheduling:
+  trigger: 'on_push_or_PR'
+  frequency: 'manual or scheduled as needed'
+output:
+  folder: output
+  reports: [md, html, json]
+  annotated_dataset: true
