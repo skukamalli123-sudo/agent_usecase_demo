@@ -1,0 +1,38 @@
+{
+  "dataset": "Data_Gauradian_sample_data.txt",
+  "validation_date": "2024-06-01",
+  "row_count": 30,
+  "columns": ["id", "name", "age", "email", "join_date", "salary", "department", "is_active"],
+  "missing_values": {
+    "age": 4,
+    "email": 3,
+    "join_date": 3,
+    "salary": 5
+  },
+  "duplicates_removed": 15,
+  "invalid": {
+    "age": [4, 7, 13, 14, 24, 27],
+    "email": [3, 13, 23],
+    "salary": [5, 10, 15, 25, 30],
+    "join_date": [8, 9, 18, 19, 21, 29]
+  },
+  "validation_rules": {
+    "required": ["id", "name", "department", "is_active"],
+    "unique": ["id"],
+    "range": {"age": ">=0", "salary": ">=0"},
+    "regex": {"email": "^.+@.+\\..+$"},
+    "enum": {"department": ["HR", "Finance", "IT", "Marketing", "Sales"], "is_active": ["true", "false", "yes", "no"]},
+    "date": {"join_date": "ISO-8601"}
+  },
+  "summary": {
+    "missing_percentage": 13.3,
+    "duplicates_removed": 15,
+    "invalid_records": 9
+  },
+  "recommendations": [
+    "Address missing and non-numeric 'age' values",
+    "Standardize and validate all email formats",
+    "Investigate negative and non-numeric salary values",
+    "Regularize join_date to ISO-8601"
+  ]
+}
