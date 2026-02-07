@@ -1,0 +1,11 @@
+id,name,age,email,join_date,salary,department,is_active
+1,Alice,29,alice@example.com,2023-01-15,55000,HR,true
+2,Bob,34,bob@example.com,2023-02-10,48000,Finance,true
+3,Charlie,35,charlie@example.com,2023-03-15,70000,IT,true
+4,David,30,david@example.com,2023-04-01,62000,HR,false
+5,Eva,42,unknown@unknown.com,2023-05-20,0,Finance,true
+6,Frank,28,frank@example.com,2023-06-18,51000,IT,true
+7,Grace,30,grace@example.com,2023-07-25,58000,Marketing,true
+8,Hank,45,hank@example.com,2023-08-01,90000,Sales,false
+9,Ivy,31,ivy@example.com,2023-01-13,65000,IT,true
+10,Jack,27,jack@example.com,2023-08-10,0,HR,true
