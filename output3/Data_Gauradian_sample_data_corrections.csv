@@ -1,0 +1,41 @@
+source_file,row_identifier,column_name,original_value,corrected_value,correction_type,correction_reason,correction_timestamp
+Data_Gauradian_sample_data.txt,2,age,,34,imputation,Missing age imputed using median,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,2,join_date,2023/02/10,2023-02-10,type_cast,Date format normalization,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,3,email,charlieexample.com,charlie@example.com,normalization,Email normalization,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,3,join_date,15-03-2023,2023-03-15,type_cast,Date format normalization,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,3,is_active,yes,true,type_cast,Boolean normalization,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,4,age,-4,30,imputation,Negative age replaced with median,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,5,email,,unknown@unknown.com,imputation,Missing email imputed,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,5,salary,not_available,0,imputation,Non-numeric salary imputed,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,7,age,thirty,30,type_cast,Text to integer conversion,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,8,join_date,,2023-08-01,imputation,Missing join_date imputed,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,9,join_date,2023-13-01,2023-01-13,type_cast,Date normalization,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,10,salary,-40000,0,imputation,Negative salary replaced with 0,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,11,duplicate_row,full,REMOVED,duplicate_removal,Exact duplicate of row 1,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,12,duplicate_row,full,REMOVED,duplicate_removal,Exact duplicate of row 2,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,13,age,thirty,30,type_cast,Text to integer conversion,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,13,email,charlieexample.com,charlie@example.com,normalization,Email normalization,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,13,join_date,15-03-2023,2023-03-15,type_cast,Date format normalization,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,13,is_active,yes,true,type_cast,Boolean normalization,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,14,age,-2,30,imputation,Negative age replaced with median,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,15,email,,unknown@unknown.com,imputation,Missing email imputed,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,15,salary,unknown,0,imputation,Non-numeric salary imputed,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,15,is_active,yes,true,type_cast,Boolean normalization,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,17,age,thirty,30,type_cast,Text to integer conversion,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,17,is_active,yes,true,type_cast,Boolean normalization,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,18,join_date,,2023-08-01,imputation,Missing join_date imputed,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,19,join_date,2023-13-01,2023-01-13,type_cast,Date normalization,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,20,salary,-40000,0,imputation,Negative salary replaced with 0,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,21,age,,29,imputation,Missing age imputed using median,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,21,duplicate_row,partial,REMOVED,duplicate_removal,Near-duplicate of row 1 (case-insensitive, normalized),2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,22,join_date,15-02-2023,2023-02-15,type_cast,Date format normalization,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,23,email,charlieexample.com,charlie@example.com,normalization,Email normalization,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,24,age,-5,30,imputation,Negative age replaced with median,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,25,email,,unknown@unknown.com,imputation,Missing email imputed,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,25,salary,not_available,0,imputation,Non-numeric salary imputed,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,25,is_active,yes,true,type_cast,Boolean normalization,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,27,age,thirty,30,type_cast,Text to integer conversion,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,27,is_active,yes,true,type_cast,Boolean normalization,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,28,join_date,,2023-08-01,imputation,Missing join_date imputed,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,29,join_date,2023-13-01,2023-01-13,type_cast,Date normalization,2024-06-13T12:00:00Z
+Data_Gauradian_sample_data.txt,30,salary,-40000,0,imputation,Negative salary replaced with 0,2024-06-13T12:00:00Z
